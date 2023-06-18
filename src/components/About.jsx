@@ -4,8 +4,11 @@ import { motion } from 'framer-motion'
 
 import { styles } from '../styles'
 import { services } from '../constants'
-import { fadeIn, textVariant } from '../utils/motion';
+import { fadeIn, textVariant, slideIn } from '../utils/motion';
 import { SectionWrapper } from '../hoc'
+
+import { hobbies } from '../constants'
+import profileImg from '../assets/profile/profile-img.jpg'
 
 
 const ServiceCard = ({ title, description, icon, index }) => {
@@ -27,7 +30,7 @@ const ServiceCard = ({ title, description, icon, index }) => {
           className='bg-tertiary rounded-2xl py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
           <img src={icon} alt={title} className='w-16 h-16 object-contain' />
           <h3 className='mt-4 text-xl font-semibold text-center'>{title}</h3>
-          <p className='mt-2 text-center text-secondary'>{description}</p>
+          <p className='mt-2 text-center'>{description}</p>
         </div>
       </motion.div>
     </Tilt>
@@ -42,13 +45,56 @@ const About = () => {
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
+      <div className='xl:mt-12 mt-8 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
+        <motion.div
+          variants={slideIn("left", "tween", 0.2, 1)}
+          className="flex-1 bg-black-100 p-8 rounded-2xl text-gray-300"
+        >
 
-      <motion.p
-        className='mt-4 text-secondary text-xl max-w-3xl leading-[30px]'
-        variants={fadeIn("", "", 0.1, 1)}
-      >
-        I am a undergraduate student at the National Institute of Technology Andhra Pradesh studying Electrical and Electronics Engineering. I am passionate about Machine Learning and Web Development that solve real world problems.  I am currently looking for a Summer 2023 internship!
-      </motion.p>
+          <motion.p
+            className='mt-4 text-xl max-w-3xl leading-[30px]'
+            variants={fadeIn("", "", 0.1, 1)}
+          >
+            Hello! I'm Suman Kumar, from Giridih, India. The city of Giridih is known for its industrial and health sectors, as well as its scenic beauty.
+          </motion.p>
+          <motion.p
+            className='mt-4 text-xl max-w-3xl leading-[30px]'
+            variants={fadeIn("", "", 0.1, 1)}
+          >
+            I am a creative, time punctual, dedicated, goal-oriented individual with decent moral Values and Ethicates along with a high-energy level, honed communication skills, strong organizational skills, and meticulous attention to detail.
+          </motion.p>
+          <motion.p
+            className='mt-4 text-xl max-w-3xl leading-[30px]'
+            variants={fadeIn("", "", 0.1, 1)}
+          >
+            I am passionate about Machine Learning and Web Development that solve real world problems.  I am currently looking for a Summer 2023 internship!
+          </motion.p>
+          <motion.div
+            className='mt-4 text-xl max-w-3xl leading-[30px]'
+            variants={fadeIn("", "", 0.1, 1)}
+          >
+            Here are a few of the other activities that I love to do!
+            <ul className="hobby">
+              {hobbies.map((hobby, index) => (
+                <li key={index}
+                  className={`${hobby.color} mt-2 leading-[30px]`}
+                >{hobby.name}</li>
+              ))}
+            </ul>
+          </motion.div>
+
+        </motion.div>
+
+        <motion.div
+          whileHover={{ scale: 1.01 }}
+          whileTap={{ scale: 1.2 }}
+          transition={{ duration: 3 }}
+          variants={slideIn("right", "tween", 0.2, 1)}
+          className='flex flex-1 justify-center items-center xl:h-auto md:h-[550px] h-[350px]'
+        >
+          <img src={profileImg} alt={"profile pic"} className="xsm:w-4/5 sm:w-3/4 md:w-4/5 lg:w-3/5 xl:w-full rounded-full" />
+        </motion.div>
+      </div>
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (

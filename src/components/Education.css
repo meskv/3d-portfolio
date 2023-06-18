@@ -1,0 +1,96 @@
+.education {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education .education-img {
+  width: 50%;
+  color: white;
+  padding: 4rem;
+}
+
+.education .education-img img {
+  width: 100%;
+}
+
+.education .education-info {
+  width: 100%;
+}
+
+.education .education-info h1 {
+  font-size: 3rem;
+  color: #e91e63;
+}
+
+.education .education-info p {
+  margin-bottom: 2rem;
+}
+
+.education .education-info .education-btn {
+  color: #e91e63;
+  border: 2px solid #e91e63;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+  border-radius: 0.4rem;
+}
+
+.education .education-info .education-btn:hover {
+  color: #fff;
+  background-color: #e91e63;
+}
+
+.education .education-info .education-box {
+  text-align: left;
+}
+
+.education .education-info .education-box .education-title {
+  font-size: 2rem;
+}
+
+.education .education-info .education-box .desc {
+  border-left: 5px solid #e91e63;
+  padding-left: 2rem;
+  margin: 0.5rem 0;
+}
+
+.education .education-info .education-box .desc .education-title {
+  display: inline;
+}
+
+.education .education-info .education-box .desc p {
+  display: block;
+  padding-left: 4rem;
+  margin-bottom: 0.8rem;
+}
+
+.education .education-info .education-box i {
+  color: #e91e63;
+  display: inline;
+  font-size: 2rem;
+  margin-right: 1rem;
+  text-align: left;
+}
+
+.education .education-info .education-box p {
+  display: inline;
+  font-family: Roboto, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 991px) {
+  .education {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+  .education .education-info {
+    width: 100%;
+  }
+}

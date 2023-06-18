@@ -88,8 +88,9 @@ const Contact = () => {
           className='mt-12 flex flex-col gap-8'>
           <label
             className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            {/* <span className='text-white font-medium mb-4'>Your Name</span> */}
             <input
+              required
               type="text"
               name="name"
               value={form.name}
@@ -101,8 +102,9 @@ const Contact = () => {
 
           <label
             className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Email</span>
+            {/* <span className='text-white font-medium mb-4'>Your Email</span> */}
             <input
+              required
               type="email"
               name="email"
               value={form.email}
@@ -114,7 +116,7 @@ const Contact = () => {
 
           {/* <label
             className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Subject</span>
+            // <span className='text-white font-medium mb-4'>Subject</span>
             <input
               type="text"
               name="subject"
@@ -127,8 +129,9 @@ const Contact = () => {
 
           <label
             className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Message</span>
+            {/* <span className='text-white font-medium mb-4'>Message</span> */}
             <textarea
+              required
               rows={7}
               type="text"
               name="message"

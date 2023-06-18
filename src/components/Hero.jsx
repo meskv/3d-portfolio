@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 import { styles } from '../styles'
-import { ComputersCanvas } from './canvas'
+import { ComputersCanvas, PatternCanvas } from './canvas'
 
 
 const Hero = () => {
@@ -15,15 +15,19 @@ const Hero = () => {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>Hi! I'm <span className='text-[#915eff]'>Suman</span>
+          <h1 className={`${styles.heroHeadText} text-white name`}>Hi! I'm <span className='text-[#915eff]'>Suman</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-200`}>
+          <div className="about-me mt-4 leading-none tracking-wider font-bold text-4xl">
+            <h2>Developer, Programmer</h2>
+          </div>
+          <p className={`${styles.heroSubText} mt-2 text-pink-50`}>
             An undergraduate at NIT Andhra pursuing a degree in Electrical and Electronics Engineering.<br className='sm:block hidden' /> I'm learning backend web development as well as programming with Python, C, and Java.
           </p>
         </div>
       </div>
 
-      <ComputersCanvas />
+      {/* <ComputersCanvas /> */}
+      {/* <PatternCanvas /> */}
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>

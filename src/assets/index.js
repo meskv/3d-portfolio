@@ -30,6 +30,16 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+// company image
+import IITPatna from "./company/iitp.png";
+import NITAndhraLogo from "./vector-img/nit_logo.png"
+import JNVLogo from "./vector-img/jnv_logo.png"
+
+// project image
+import project1Img from "../assets/projects-img/air.jpg"
+import project2Img from "../assets/projects-img/ColorPalleteGenerator.jpg"
+import project3Img from "../assets/projects-img/numberGame.jpg"
+
 export {
   logo,
   backend,
@@ -59,4 +69,12 @@ export {
   carrent,
   jobit,
   tripguide,
+
+  IITPatna,
+  NITAndhraLogo,
+  JNVLogo,
+
+  project1Img,
+  project2Img,
+  project3Img,
 };

@@ -47,6 +47,9 @@ base: "/YOUR_REPOSITORY_NAME",
 npm run deploy
 ```
 
+* https://www.youtube.com/watch?v=XhoWXhyuW_I
+
+
 ## How to get 3D models
 1. Go to https://sketchfab.com/
 2. Google Search for 3D models

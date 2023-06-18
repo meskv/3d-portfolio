@@ -61,8 +61,8 @@ const Works = () => {
   return (
     <>
       <motion.div>
-        <p className={styles.sectionSubText}>My Projects</p>
-        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+        <p className={styles.sectionSubText}></p>
+        <h2 className={styles.sectionHeadText}>My Projects.</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -70,7 +70,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-base max-w-3xl leading-[30px]'
         >
-          This is my work experience Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum porro ducimus saepe voluptatibus ipsa error libero. Quisquam, voluptatum. Quisquam, voluptatum.
+          These are some of my projects that I have worked on. I have worked on a variety of projects, ranging from web development to machine learning. I am always looking for new projects to work on, so if you have any ideas, please feel free to reach out to me!
         </motion.p>
       </div>
 
@@ -87,4 +87,4 @@ const Works = () => {
   )
 }
 
-export default SectionWrapper(Works, "")
+export default SectionWrapper(Works, "projects")
