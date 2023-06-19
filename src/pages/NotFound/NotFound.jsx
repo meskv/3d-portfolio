@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { baseRoute } from '../../constants'
 
 const NotFound = () => {
     return (
@@ -7,7 +8,7 @@ const NotFound = () => {
             <div className="text-center flex gap-4 flex-col">
                 <h2 className='text-3xl font-bold'>404 Error</h2>
                 <p className='text-2xl font-medium'>We cannot find that page!</p>
-                <Link to="/" className='text-red-400'>Back to Home</Link>
+                <Link to={baseRoute} className='text-red-400'>Back to Home</Link>
             </div>
         </div>
     )

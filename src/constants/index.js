@@ -41,6 +41,8 @@ import {
     project3Img
 } from "../assets";
 
+const baseRoute = "/portfolio";
+
 export const navLinks = [
     {
         id: "about",
@@ -305,6 +307,7 @@ const educations = [
 ];
 
 export {
+    baseRoute,
     services,
     technologies,
     experiences,
