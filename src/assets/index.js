@@ -4,6 +4,7 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
+import webIcon from "./webIcon.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -40,6 +41,11 @@ import project1Img from "../assets/projects-img/air.jpg"
 import project2Img from "../assets/projects-img/ColorPalleteGenerator.jpg"
 import project3Img from "../assets/projects-img/numberGame.jpg"
 
+// chatgpt clone img
+import chatgptProjImg1 from "../assets/projects-img/chatgpt-clone/home-screen-1.png"
+import chatgptProjImg2 from "../assets/projects-img/chatgpt-clone/home-screen-2.png"
+import chatgptProjImg3 from "../assets/projects-img/chatgpt-clone/output-screen.png"
+
 export {
   logo,
   backend,
@@ -47,6 +53,7 @@ export {
   mobile,
   web,
   github,
+  webIcon,
   menu,
   close,
   css,
@@ -77,4 +84,8 @@ export {
   project1Img,
   project2Img,
   project3Img,
+
+  chatgptProjImg1,
+  chatgptProjImg2,
+  chatgptProjImg3
 };

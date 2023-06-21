@@ -38,7 +38,11 @@ import {
 
     project1Img,
     project2Img,
-    project3Img
+    project3Img,
+
+    chatgptProjImg1,
+    chatgptProjImg2,
+    chatgptProjImg3,
 } from "../assets";
 
 const baseRoute = "/portfolio";
@@ -170,6 +174,32 @@ const testimonials = [
 
 const projects = [
     {
+        name: "ChatGPT Clone",
+        description:
+            "Created a clone of chatGPT using ReactJs and Tailwind CSS. ChatGPT is a chatbot that uses GPT-3 to answer your questions. It is a web app that uses the OpenAI API to complete your text.",
+        tags: [
+            {
+                name: "react",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "nodejs",
+                color: "orange-text-gradient",
+            },
+            {
+                name: "tailwind",
+                color: "green-text-gradient",
+            },
+            {
+                name: "openai",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: chatgptProjImg1,
+        source_code_link: "https://github.com/meskv/chatgpt",
+        deployedLink: "",
+    },
+    {
         name: "AIR Website",
         description:
             "Multi page Responsive React website built using ReactJs and scss",
@@ -185,6 +215,7 @@ const projects = [
         ],
         image: project1Img,
         source_code_link: "https://github.com/meskv/AIR_WEBSITE",
+        deployedLink: "https://ai-robotics.netlify.app/"
     },
     {
         name: "Color Pallete Generator",
@@ -206,6 +237,7 @@ const projects = [
         ],
         image: project2Img,
         source_code_link: "https://github.com/",
+        deployedLink: "https://meskv.netlify.app/projects/ColorPalleteGenerator/index.html"
     },
     {
         name: "Random Number Guessing Game",
@@ -227,6 +259,7 @@ const projects = [
         ],
         image: project3Img,
         source_code_link: "https://github.com/",
+        deployedLink: "https://meskv.netlify.app/projects/numbergame/"
     },
 ];
 
