@@ -1,10 +1,7 @@
 import React from "react";
 import { createBrowserRouter, Route, Routes, Navigate, RouterProvider } from "react-router-dom";
 
-import {
-  Navbar, Hero, About, Experience, Tech, Works, Contact, StarsCanvas, Footer, Education
-} from "./components";
-import { NotFound, Resume } from "./pages";
+import { Home, NotFound, Projects, Resume } from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -12,29 +9,21 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <div className='relative z-0 bg-primary'>
-          <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-            <Navbar />
-            <Hero />
-          </div>
-          <About />
-          <Education />
-          <Experience />
-          <Tech />
-          <Works />
-          {/* <Feedbacks /> */}
-          <div className='relative z-0'>
-            <Contact />
-            <StarsCanvas />
-          </div>
-          <Footer />
-        </div>,
+        element: <Home />,
+      },
+      {
+        path: "projects",
+        element: <Projects />,
       },
       {
         path: "resume",
         element: <Resume />,
       },
     ],
+  },
+  {
+    path: "/projects",
+    element: <Navigate to="/portfolio/projects" />,
   },
   {
     path: "/*",

@@ -41,9 +41,8 @@ const Navbar = () => {
             >
               {!link.path
                 ? <a href={`#${link.id}`}> {link.title} </a>
-                : <Link to={link.path}> {link.title} </Link>
+                : <Link to={`${link.path}`}> {link.title} </Link>
               }
-
             </li>
           ))}
         </ul>
