@@ -50,7 +50,7 @@ const baseRoute = "/portfolio";
 const heroTypedText = [
     "Developer",
     "Programmer",
-    "ML Enthusianst"
+    "ML Enthusiast",
 ]
 
 const navLinks = [
