@@ -47,7 +47,13 @@ import {
 
 const baseRoute = "/portfolio";
 
-export const navLinks = [
+const heroTypedText = [
+    "Developer",
+    "Programmer",
+    "ML Enthusianst"
+]
+
+const navLinks = [
     {
         id: "about",
         title: "About",
@@ -342,6 +348,8 @@ const educations = [
 
 export {
     baseRoute,
+    navLinks,
+    heroTypedText,
     services,
     technologies,
     experiences,

@@ -10,6 +10,7 @@ import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
+import TypedText from './TypedText';
 
 export {
   Hero,
@@ -23,6 +24,8 @@ export {
   Contact,
   Footer,
   ScrollToTop,
+  TypedText,
+  
   EarthCanvas,
   BallCanvas,
   ComputersCanvas,

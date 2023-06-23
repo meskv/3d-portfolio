@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 
 import { styles } from '../styles'
 import { ComputersCanvas, PatternCanvas } from './canvas'
+import TypedText from './TypedText'
+import { heroTypedText } from '../constants'
 
 
 const Hero = () => {
@@ -15,10 +17,13 @@ const Hero = () => {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} text-white name`}>Hi! I'm <span className='text-[#915eff]'>Suman</span>
+          <h1 className={`${styles.heroHeadText} text-white name`}>Hi! I'm <span className='text-[#915eff]'>
+            {/* <TypedText delay={150} words={["Suman"]} /> */}
+            Suman
+          </span>
           </h1>
           <div className="about-me mt-4 leading-none tracking-wider font-bold text-4xl">
-            <h2>Developer, Programmer</h2>
+            <TypedText words={heroTypedText} />
           </div>
           <p className={`${styles.heroSubText} mt-2 text-pink-50`}>
             An undergraduate at NIT Andhra pursuing a degree in Electrical and Electronics Engineering.<br className='sm:block hidden' /> I'm learning backend web development as well as programming with Python, C, and Java.

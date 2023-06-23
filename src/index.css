@@ -235,3 +235,22 @@
   margin: 0 !important;
   margin-top: 0.5rem !important;
 }
+
+/* TYPEWRITER EFFECT */
+.bg-code {
+  background-color: rgb(40, 42, 54);
+}
+
+.blinking-cursor::after {
+  content: "|";
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
