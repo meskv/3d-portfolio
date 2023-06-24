@@ -9,11 +9,8 @@ module.exports = {
         primary: "#050816",
         secondary: "#aaa6c3",
         tertiary: "#151030",
+        // ascent: "#e91e63",
         ascent: "#e91e63",
-        // primary: "#fff",
-        // secondary: "#000",
-        // tertiary: "#e91e63",
-        // heroPoint: "#915eff",
         heroPoint: "#e91e63",
       },
       boxShadow: {

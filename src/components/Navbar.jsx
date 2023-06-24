@@ -5,7 +5,9 @@ import { styles } from '../styles'
 import { baseRoute, navLinks } from '../constants'
 import { logo, menu, close } from '../assets'
 
-import { BsSun, BsFillMoonFill } from 'react-icons/bs'
+import { BiMenuAltRight } from 'react-icons/bi'
+import { AiOutlineClose } from 'react-icons/ai'
+import { BsSun, BsMoonStars } from 'react-icons/bs'
 import { HiOutlineDesktopComputer } from 'react-icons/hi'
 
 const Navbar = () => {
@@ -19,13 +21,13 @@ const Navbar = () => {
   const element = document.documentElement
   const darkQUuery = window.matchMedia('(prefers-color-scheme: dark)')
 
-  const themeOtions = [
+  const themeOptions = [
     {
       icon: BsSun,
       text: 'light',
     },
     {
-      icon: BsFillMoonFill,
+      icon: BsMoonStars,
       text: 'dark',
     },
     // {
@@ -101,41 +103,61 @@ const Navbar = () => {
 
           <div className='duration-100 flex gap-2 text-gray-900 dark:text-gray-100'>
             {
-              themeOtions.map((option) => (
-                <button
-                  key={option.texttext}
-                  onClick={() => {
-                    setTheme(option.text);
-                    // refresh the page to apply the theme
-                    window.location.reload()
-                  }}
-
-                >
-                  <option.icon className={`h-8 w-8 p-2 text-2xl leading-9 rounded-sm bg-gray-100 dark:bg-gray-800  
-                  ${theme === option.text && "text-gray-50 bg-ascent dark:text-gray-100 dark:bg-ascent"}`} />
-                </button>
-              ))
+              // render dark mode button if theme is dark else render light mode button
+              theme === 'dark' ?
+                <ThemeButton
+                  icon={BsSun}
+                  text='light'
+                  theme={theme}
+                  setTheme={setTheme}
+                />
+                :
+                <ThemeButton
+                  icon={BsMoonStars}
+                  text='dark'
+                  theme={theme}
+                  setTheme={setTheme}
+                />
             }
+
+
+            {/* {
+              themeOptions.map((option) =>
+                <ThemeButton
+                  key={option.text}
+                  icon={option.icon}
+                  text={option.text}
+                  theme={theme}
+                  setTheme={setTheme}
+                />
+              )
+            } */}
           </div>
         </ul>
 
         {/* nav for small devices */}
         <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img
+
+          {toggle
+            ? <AiOutlineClose className='h-6 w-6 text-black dark:text-white cursor-pointer' onClick={() => setToggle(!toggle)} />
+            : <BiMenuAltRight className='h-6 w-6 text-black dark:text-white cursor-pointer' onClick={() => setToggle(!toggle)} />
+          }
+
+          {/* <img
             src={toggle ? close : menu}
             alt="menu"
             className='w-[28] h-[28] object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}
-          />
+          /> */}
 
-          <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
+          <div className={`${!toggle ? 'hidden' : 'flex'} bg-gray-200 dark:bg-gray-700 p-6 absolute top-20 right-0 my-2 min-w-[200px] text-center mx-4 m-auto z-10 rounded-xl`}>
             <ul className="list-none flex justify-end items-start flex-col gap-4">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
                   className={`${active === link.title
-                    ? 'text-gray-900 dark:text-white font-bold'
-                    : 'text-gray-700 dark:text-secondary'
+                    ? 'text-gray-900 dark:text-gray-100 font-bold'
+                    : 'text-gray-700 dark:text-gray-400'
                     } hover:scale-105 text-[18px] font-medium cursor-pointer}
                     `}
                   onClick={() => {
@@ -149,20 +171,21 @@ const Navbar = () => {
 
               <div className='duration-100 flex gap-2 text-gray-900 dark:text-gray-100'>
                 {
-                  themeOtions.map((option) => (
-                    <button
-                      key={option.texttext}
-                      onClick={() => {
-                        setTheme(option.text);
-                        // refresh the page to apply the theme
-                        window.location.reload()
-                      }}
-
-                    >
-                      <option.icon className={`h-8 w-8 p-2 text-2xl leading-9 rounded-sm bg-gray-100 dark:bg-gray-800  
-                  ${theme === option.text && "text-gray-100 bg-ascent dark:text-gray-100 dark:bg-ascent"}`} />
-                    </button>
-                  ))
+                  // render dark mode button if theme is dark else render light mode button
+                  theme === 'dark' ?
+                    <ThemeButton
+                      icon={BsSun}
+                      text='light'
+                      theme={theme}
+                      setTheme={setTheme}
+                    />
+                    :
+                    <ThemeButton
+                      icon={BsMoonStars}
+                      text='dark'
+                      theme={theme}
+                      setTheme={setTheme}
+                    />
                 }
               </div>
             </ul>
@@ -174,3 +197,21 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+const ThemeButton = ({ icon: Icon, text, theme, setTheme }) => (
+
+  <>
+    <button
+      onClick={() => {
+        setTheme(text);
+        // refresh the page to apply the theme
+        window.location.reload();
+      }}
+      className={`p-2 md:-my-2 flex rounded-full items-center justify-center hover:bg-gray-200 hover:dark:bg-gray-800 outline-link cursor-pointer`}
+    >
+      <Icon
+        className={`h-6 w-6 transition-transform flex rounded-full items-center text-gray-800 dark:text-gray-200 justify-center`}
+      />
+    </button>
+  </>
+);
