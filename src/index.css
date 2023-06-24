@@ -6,6 +6,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/*  ---------------------------------- DARK THEME TOGGLE BTN ----------------------------------  */
+:root {
+  --clr-bg-dark: #1f2937; /* gray-800 */
+  --clr-bg-light: #fafafa; /* zinc-50 */
+
+  --clr-text-dark: #1f2937; /* gray-200 */
+  --clr-text-light: #fafafa; /* zinc-50 */
+}
+
+.dark {
+  background-color: var(--clr-bg-dark);
+  color: var(--clr-text-dark);
+}
+
+.light {
+  background-color: var(--clr-bg-light);
+  color: var(--clr-text-light);
+}
+/*  ---------------------------------- DARK THEME TOGGLE BTN ----------------------------------  */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +33,7 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+
 }
 
 .hash-span {
@@ -45,10 +66,25 @@
   );
 }
 
+.pink-gradient {
+  background: #e91e63;
+  background: linear-gradient(-90deg, #e91e63 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #e91e63 0%,
+    rgba(60, 51, 80, 0) 100%
+  );
+}
+
 .green-pink-gradient {
   background: "#00cea8";
   background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
+
+.green-pink-gradient-light {
+  background-color: #f9c5d1;
+  background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);
 }
 
 .orange-text-gradient {
@@ -205,12 +241,17 @@
   }
 }
 
-/* CUSTOM CSS */
-.logo p {
+/* ------------------ CUSTOM CSS------------------ */
+.pigment-gradient {
+  background-color: #f9fcff;
+  background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+}
+
+/* .logo p {
   color: #fff;
   font-weight: bolder;
   font-family: "Baloo Bhai 2", cursive;
-}
+} */
 
 .name {
   font-family: "Baloo Bhai 2", cursive;

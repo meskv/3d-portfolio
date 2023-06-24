@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Navbar, Hero, About, Experience, Tech, Works, Contact, StarsCanvas, Footer, Education } from '../../components'
 
 const Home = () => {
     return (
-        <div className='relative z-0 bg-primary'>
-            <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+        <div className={`relative z-0 bg-white dark:bg-primary`}>
+            <div className='bg-cover bg-no-repeat bg-center'>
                 <Navbar />
                 <Hero />
             </div>

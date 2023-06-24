@@ -24,7 +24,7 @@ const ScrollButton = () => {
 
     return (
         <button
-            className={`p-3 rounded-full bg-pink-700 text-white fixed bottom-5 right-5 z-50 ${visible ? "block" : "hidden"}`}
+            className={`p-3 rounded-full bg-ascent text-white fixed bottom-5 right-5 z-50 ${visible ? "block" : "hidden"}`}
             style={{ display: visible ? "inline" : "none" }}
             onClick={scrollToTop}
             href

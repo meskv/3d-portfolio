@@ -7,6 +7,7 @@ import { github, webIcon } from '../assets'
 import { SectionWrapper } from '../hoc'
 import { projects } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
+import { BsGithub, BsGlobe } from 'react-icons/bs'
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link, deployedLink }) => {
   return (
@@ -19,7 +20,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className={`p-5 rounded-2xl sm:w-[360px] w-full ${styles.card}`}
       >
         <div className='relative w-full h-[230px]'>
           <img src={image} alt={name}
@@ -31,9 +32,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
               onClick={() => {
                 window.open(source_code_link, "_blank")
               }}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:opacity-80 hover:scale-x-105 transition-transform duration-500">
-              <img src={github} alt={`github`}
-                className="w-1/2 h-1/2 object-contain" />
+              className="bg-ascent text-gray-50 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:opacity-80 hover:scale-x-105 transition-transform duration-500">
+              <BsGithub className='w-6 h-6 text-xl' />
             </div>
 
             {
@@ -41,19 +41,18 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
                 onClick={() => {
                   window.open(deployedLink, "_blank")
                 }}
-                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:opacity-80 hover:scale-x-105 transition-transform duration-500">
-                <img src={webIcon} alt={`github`}
-                  className="w-1/2 h-1/2 object-contain" />
+                className="bg-ascent text-gray-50 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:opacity-80 hover:scale-x-105 transition-transform duration-500">
+                <BsGlobe className='w-6 h-6 text-xl' />
               </div>
             }
 
           </div>
         </div>
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-2xl'>
+          <h3 className='text-gray-900 dark:text-white font-bold text-2xl'>
             {name}
           </h3>
-          <p className='text-secondary text-base'>
+          <p className='text-gray-800 dark:text-secondary text-base'>
             {description}
           </p>
         </div>
@@ -80,7 +79,7 @@ const Works = () => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-base max-w-3xl leading-[30px]'
+          className='mt-3 text-xl text-gray-800 dark:text-gray-200 max-w-3xl leading-[30px]'
         >
           These are some of my projects that I have worked on. I have worked on a variety of projects, ranging from web development to machine learning. I am always looking for new projects to work on, so if you have any ideas, please feel free to reach out to me!
         </motion.p>

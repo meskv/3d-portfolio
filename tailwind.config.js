@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
   theme: {
@@ -8,12 +9,12 @@ module.exports = {
         primary: "#050816",
         secondary: "#aaa6c3",
         tertiary: "#151030",
+        ascent: "#e91e63",
         // primary: "#fff",
         // secondary: "#000",
         // tertiary: "#e91e63",
-        "black-100": "#100d25",
-        "black-200": "#090325",
-        "white-100": "#f3f3f3",
+        // heroPoint: "#915eff",
+        heroPoint: "#e91e63",
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",

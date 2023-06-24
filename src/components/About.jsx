@@ -19,7 +19,7 @@ const ServiceCard = ({ title, description, icon, index }) => {
     >
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className='w-full green-pink-gradient rounded-xl shadow-card p-2'
+        className='w-full green-pink-gradient rounded-xl dark:shadow-card p-2'
       >
         <div
           options={{
@@ -27,7 +27,7 @@ const ServiceCard = ({ title, description, icon, index }) => {
             scale: 1,
             speed: 450,
           }}
-          className='bg-tertiary rounded-2xl py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
+          className={`dark:bg-tertiary rounded-2xl py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col ${styles.card}`}>
           <img src={icon} alt={title} className='w-16 h-16 object-contain' />
           <h3 className='mt-4 text-xl font-semibold text-center'>{title}</h3>
           <p className='mt-2 text-center'>{description}</p>
@@ -48,7 +48,7 @@ const About = () => {
       <div className='xl:mt-12 mt-8 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-1 bg-black-100 p-8 rounded-2xl text-gray-300"
+          className={`flex-1 p-8 rounded-2xl ${styles.card}`}
         >
 
           <motion.p
