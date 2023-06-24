@@ -88,7 +88,7 @@ const Contact = () => {
           className='mt-12 flex flex-col gap-8'>
           <label
             className='flex flex-col'>
-            {/* <span className='dark:text-white font-medium mb-4'>Your Name</span> */}
+            {/* <span className= text-gray-900 dark:text-white font-medium mb-4'>Your Name</span> */}
             <input
               required
               type="text"
@@ -96,13 +96,13 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="Your name"
-              className='bg-gray-200 dark:bg-tertiary py-4 px-6 placeholder:text-gray-500 dark:placeholder:text-secondary dark:text-white rounded-lg outline-none border-none font-medium'
+              className='bg-gray-200 dark:bg-tertiary py-4 px-6 placeholder:text-gray-500 dark:placeholder:text-secondary text-gray-900 dark:text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
 
           <label
             className='flex flex-col'>
-            {/* <span className='dark:text-white font-medium mb-4'>Your Email</span> */}
+            {/* <span className= text-gray-900 dark:text-white font-medium mb-4'>Your Email</span> */}
             <input
               required
               type="email"
@@ -110,26 +110,26 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="Your email"
-              className='bg-gray-200 dark:bg-tertiary py-4 px-6 placeholder:text-gray-500 dark:placeholder:text-secondary dark:text-white rounded-lg outline-none border-none font-medium'
+              className='bg-gray-200 dark:bg-tertiary py-4 px-6 placeholder:text-gray-500 dark:placeholder:text-secondary text-gray-900 dark:text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
 
           {/* <label
             className='flex flex-col'>
-            // <span className='dark:text-white font-medium mb-4'>Subject</span>
+            // <span className= text-gray-900 dark:text-white font-medium mb-4'>Subject</span>
             <input
               type="text"
               name="subject"
               value={form.subject}
               onChange={handleChange}
               placeholder="Subject of your message"
-              className='bg-gray-200 dark:bg-tertiary py-4 px-6 placeholder:text-gray-500 dark:placeholder:text-secondary dark:text-white rounded-lg outline-none border-none font-medium'
+              className='bg-gray-200 dark:bg-tertiary py-4 px-6 placeholder:text-gray-500 dark:placeholder:text-secondary text-gray-900 dark:text-white rounded-lg outline-none border-none font-medium'
             />
           </label> */}
 
           <label
             className='flex flex-col'>
-            {/* <span className='dark:text-white font-medium mb-4'>Message</span> */}
+            {/* <span className= text-gray-900 dark:text-white font-medium mb-4'>Message</span> */}
             <textarea
               required
               rows={7}
@@ -138,11 +138,11 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="Your message"
-              className='bg-gray-200 dark:bg-tertiary py-4 px-6 placeholder:text-gray-500 dark:placeholder:text-secondary dark:text-white rounded-lg outline-none border-none font-medium'
+              className='bg-gray-200 dark:bg-tertiary py-4 px-6 placeholder:text-gray-500 dark:placeholder:text-secondary text-gray-900 dark:text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
           <button
-            className='bg-gray-200 dark:bg-tertiary py-3 px-8 outline-none w-fit text-gray-800 dark:text-white font-bold shadow-md dark:shadow-primary rounded-lg'
+            className='bg-gray-200 dark:bg-tertiary py-3 px-8 outline-none w-fit text-gray-900 dark:text-white font-bold shadow-md dark:shadow-primary rounded-lg'
             type="submit"
           >
             {loading ? "Sending..." : "Send Message"}
