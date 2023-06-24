@@ -16,7 +16,7 @@ const Navbar = () => {
 
   // for light/dark mode theme
   const [theme, setTheme] = useState(
-    localStorage.getItem('theme') ? localStorage.getItem('theme') : 'system'
+    localStorage.getItem('theme') ? localStorage.getItem('theme') : 'dark'
   )
   const element = document.documentElement
   const darkQUuery = window.matchMedia('(prefers-color-scheme: dark)')

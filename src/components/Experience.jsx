@@ -34,6 +34,7 @@ const ExperienceCard = ({ experience }) => {
       contentStyle={contentStyle}
       contentArrowStyle={contentArrowStyle}
       date={experience.date}
+      dateClassName='text-gray-900 dark:text-white text-[16px] font-bold'
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div className={`flex justify-center items-center w-full h-full`}>
@@ -62,6 +63,13 @@ const ExperienceCard = ({ experience }) => {
 }
 
 const Experience = () => {
+  const darkQUuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+  // Determine the background and text colors based on the current mode
+  const lineColor = (localStorage.theme === 'dark' || (!('theme' in localStorage) && darkQUuery.matches))
+    ? "#fff"
+    : "#222";
+
   return (
     <>
       <motion.div>
@@ -70,7 +78,9 @@ const Experience = () => {
       </motion.div>
 
       <div className='mt-20 flex flex-col'>
-        <VerticalTimeline>
+        <VerticalTimeline
+          lineColor={lineColor !== "" ? lineColor : "#222"}
+        >
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
 

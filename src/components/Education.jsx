@@ -17,11 +17,11 @@ import { educations } from '../constants'
 const EducationCard = ({ education }) => {
     const darkModeContentStyle = { background: '#1d1836', color: '#ffffff7b' };
     const darkModeContentArrowStyle = { borderRight: '7px solid #232631' };
-    
+
     const lightModeContentStyle = { background: '#d0bfbf2c', color: '#000000' };
     const lightModeContentArrowStyle = { borderRight: '7px solid #000000d7' };
 
-    console.log('localStorage.theme: ', localStorage.theme);
+    // console.log('localStorage.theme: ', localStorage.theme);
 
     const darkQUuery = window.matchMedia('(prefers-color-scheme: dark)')
 
@@ -40,6 +40,7 @@ const EducationCard = ({ education }) => {
                 contentStyle={contentStyle}
                 contentArrowStyle={contentArrowStyle}
                 date={education.date}
+                dateClassName='text-gray-900 dark:text-white text-[16px] font-bold'
                 iconStyle={{ background: education.iconBg }}
                 icon={
                     <div className={`flex justify-center items-center w-full h-full`}>
@@ -49,6 +50,7 @@ const EducationCard = ({ education }) => {
                             className='w-[80%] h-[80%] object-contain' />
                     </div>
                 }
+                style={{ color: 'red' }}
             >
                 <div className='timeline'>
                     <h3 className='text-gray-900 dark:text-white text-[24px] font-bold'>{education.university}</h3>
@@ -62,6 +64,12 @@ const EducationCard = ({ education }) => {
 }
 
 const Education = () => {
+    const darkQUuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+    // Determine the background and text colors based on the current mode
+    const lineColor = (localStorage.theme === 'dark' || (!('theme' in localStorage) && darkQUuery.matches))
+        ? "#fff"
+        : "#222";
     return (
         <>
             <motion.div>
@@ -74,7 +82,7 @@ const Education = () => {
             </motion.div>
 
             <div className='mt-20 flex flex-col'>
-                <VerticalTimeline>
+                <VerticalTimeline lineColor={lineColor !== "" ? lineColor : "#222"}>
                     {educations.map((education, index) => (
                         <EducationCard key={index} education={education} />
                     ))}
