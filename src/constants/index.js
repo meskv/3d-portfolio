@@ -65,7 +65,7 @@ const navLinks = [
     {
         id: "projects",
         title: "Projects",
-        // path: "/projects"
+        path: "/projects"
     },
     {
         id: "contact",

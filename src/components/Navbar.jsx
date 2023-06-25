@@ -75,7 +75,7 @@ const Navbar = () => {
           }}
         >
           {/* <img src={logo} alt="logo" className='w-10 h-10 object-contain' /> */}
-          <p className='text-black dark:text-white text-3xl font-bold cursor-pointer flex fler'>
+          <p className='text-black dark:text-white text-3xl font-bold cursor-pointer flex flex-row'>
             Suman &nbsp;
             {/* <span className='sm:block hidden'>|
               Tech Enthusiast
@@ -199,19 +199,16 @@ const Navbar = () => {
 export default Navbar
 
 const ThemeButton = ({ icon: Icon, text, theme, setTheme }) => (
-
-  <>
-    <button
-      onClick={() => {
-        setTheme(text);
-        // refresh the page to apply the theme
-        window.location.reload();
-      }}
-      className={`p-2 md:-my-2 flex rounded-full items-center justify-center hover:bg-gray-200 hover:dark:bg-gray-800 outline-link cursor-pointer`}
-    >
-      <Icon
-        className={`h-6 w-6 transition-transform flex rounded-full items-center text-gray-800 dark:text-gray-200 justify-center`}
-      />
-    </button>
-  </>
+  <button
+    onClick={() => {
+      setTheme(text);
+      // refresh the page to apply the theme
+      window.location.reload();
+    }}
+    className={`p-2 md:-my-2 flex rounded-full items-center justify-center hover:bg-gray-200 hover:dark:bg-gray-800 outline-link cursor-pointer`}
+  >
+    <Icon
+      className={`h-6 w-6 transition-transform flex rounded-full items-center text-gray-800 dark:text-gray-200 justify-center`}
+    />
+  </button>
 );

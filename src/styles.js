@@ -13,7 +13,7 @@ const styles = {
     sectionSubText:
         "text-gray-600 dark:text-gray-400 sm:text-[18px] text-[14px] uppercase tracking-wider",
 
-    card: "text-gray-800 dark:text-gray-300 bg-white border border-gray-200 hover:bg-gray-100 dark:bg-tertiary dark:border-gray-700 dark:hover:bg-gray-700"
+    card: "text-gray-900 dark:text-white group relative rounded-3xl bg-slate-50 p-6 dark:bg-slate-800/80 dark:highlight-white/5 hover:bg-slate-100 dark:hover:bg-slate-700/50"
 };
 
 export { styles };

@@ -1,8 +1,7 @@
 import React from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
-import { motion } from 'framer-motion'
-
 import 'react-vertical-timeline-component/style.min.css'
+import { motion } from 'framer-motion'
 
 import { styles } from '../styles'
 import { experiences } from '../constants'
@@ -13,7 +12,7 @@ const ExperienceCard = ({ experience }) => {
   const darkModeContentStyle = { background: '#1d1836', color: '#ffffff7b' };
   const darkModeContentArrowStyle = { borderRight: '7px solid #232631' };
 
-  const lightModeContentStyle = { background: '#d0bfbf2c', color: '#000000' };
+  const lightModeContentStyle = { background: 'rgb(241 245 249 / var(--tw-bg-opacity))', color: '#000000' };
   const lightModeContentArrowStyle = { borderRight: '7px solid #000000d7' };
 
   console.log('localStorage.theme: ', localStorage.theme);
@@ -46,14 +45,14 @@ const ExperienceCard = ({ experience }) => {
     >
       <div>
         <h3 className='text-gray-900 dark:text-white text-[24px] font-bold'>{experience.title}</h3>
-        <p className='text-gray-700 dark:text-secondary text-xl font-semibold'>{experience.company_name}</p>
+        <p className='text-gray-500 dark:text-secondary text-4xl font-bold'>{experience.company_name}</p>
       </div>
 
       <ul>
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="text-black dark:text-secondary text-base pl-1 tracking-wider my-1"
+            className="text-black dark:text-gray-100 text-base pl-1 tracking-wider my-1"
           >{point}
           </li>
         ))}

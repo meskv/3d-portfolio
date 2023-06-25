@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
 
-
 import { styles } from '../styles'
 import { fadeIn, textVariant, slideIn } from '../utils/motion';
 import { SectionWrapper } from '../hoc'
@@ -18,7 +17,7 @@ const EducationCard = ({ education }) => {
     const darkModeContentStyle = { background: '#1d1836', color: '#ffffff7b' };
     const darkModeContentArrowStyle = { borderRight: '7px solid #232631' };
 
-    const lightModeContentStyle = { background: '#d0bfbf2c', color: '#000000' };
+    const lightModeContentStyle = { background: 'rgb(241 245 249 / var(--tw-bg-opacity))', color: '#000000' };
     const lightModeContentArrowStyle = { borderRight: '7px solid #000000d7' };
 
     // console.log('localStorage.theme: ', localStorage.theme);
@@ -54,7 +53,7 @@ const EducationCard = ({ education }) => {
             >
                 <div className='timeline'>
                     <h3 className='text-gray-900 dark:text-white text-[24px] font-bold'>{education.university}</h3>
-                    <h3 className='text-gray-500 dark:text-secondary text-[14px] font-bold '>{education.degree}</h3>
+                    <h3 className='text-gray-500 dark:text-secondary text-[14px] font-bold'>{education.degree}</h3>
                     <p className='text-gray-900 dark:text-white text-[16px] font-bold'>{education.major}</p>
                     <p className='text-gray-900 dark:text-white text-[18px] font-bold'>{education.grade}</p>
                 </div>
